@@ -1,0 +1,74 @@
+<?php include_once 'includes/header_inc.php'?>
+<?php include_once 'connections_/connection.php'?>
+
+
+
+<div class="all">
+  <div class="container" id="containerprincipal">
+  <form action="connections_/create.php" method="POST" id="form">
+  <h4 id="h4">Formulário de Cadastro</h4> 
+  
+  <?php 
+    
+    $sql = "SELECT * FROM 'empresa_estoque' WHERE id_estoque = $id";
+    $query = mysqli_query($conecta, $sql);
+    while($array = mysqli_fetch_array($query)){
+        $id_estoque    = $array['id_estoque'];
+        $numeroproduto = $array['numeroproduto'];
+        $nomeproduto   = $array['nomeproduto'];
+        $categoria     = $array['categoria'];
+        $quantidade    = $array['quantidade'];
+        $fornecedor    = $array['fornecedor'];
+    
+?>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Número do Produto</label>
+    <input type="number" class="form-control" name="numeroproduto" aria-describedby="emailHelp" value="<?php echo $numeroproduto ?>" style="display: disabled;">
+    </div>
+
+    <div class="form-group">
+    <label for="exampleInputEmail1">Nome do Produto</label>
+    <input type="text" class="form-control" name="nomeproduto" aria-describedby="emailHelp" placeholder="Insira o nome do produto" require>
+    </div>
+
+    <div class="form-group">
+    <label for="exampleFormControlSelect1">Categoria</label>
+    <select class="form-control" name="categoria" require>
+      <option>Periférico</option>
+      <option>Hardware</option>
+      <option>Software</option>
+      <option>Celulares</option>
+    </select>
+  </div>
+  <div class="form-group">
+
+  
+  <div class="form-group">
+    <label for="exampleInputEmail1">Quantidade</label>
+    <input type="number" class="form-control" name="quantidade"  aria-describedby="emailHelp" placeholder="Insira a quantidade do produto" require>
+    </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Fornecedor</label>
+    <select class="form-control" name="fornecedor">
+      <option>Fornecedor A</option>
+      <option>Fornecedor B</option>
+      <option>Fornecedor C</option>
+    </select>
+  </div>
+  <div class="form-group">
+
+  <div style="text-align: right;">
+  <button type="submit" class="btn btn-success btn-sm" id="button">Edite</button>
+  </div>
+
+</div>
+</div>
+<?php } ?>
+</form>
+
+      
+
+
+<?php include_once 'includes/footer.php'?>
