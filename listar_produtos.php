@@ -4,6 +4,13 @@
 <div class="container" style="margin-top: 40px;">
 <h4>Lista de Produtos</h4>
 
+<!--Exibir mensagem de erro-->
+<?php if (isset($mensagem)){ ?> <!--isset verifica se a var está configurada ou definida, se tiver definida é pq deu falha pois já vem do arquivo loginsenha, se não tiver configurada é pq foi um sucesso-->
+    <div class="alert" style="text-align: center" role="alert">
+        <?php echo $mensagem ?> 
+    </div>
+  <?php } ?> <!--lembre se do fechamento da chave nessa outra tag html-->
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -19,7 +26,7 @@
     <tr>
     <?php
         include_once 'connections_/connection.php';
-        $sql = "SELECT * FROM `estoque`";
+        $sql = "SELECT * FROM estoque";
         $query = mysqli_query($conecta, $sql);
 
         while($array = mysqli_fetch_assoc($query)){
@@ -35,7 +42,7 @@
            <tr> 
 
             <td><?php echo $numeroproduto?></td>
-            <td><?php echo $numeroproduto?></td>
+            <td><?php echo $nomeproduto?></td>
             <td><?php echo $categoria?></td>
             <td><?php echo $quantidade?></td>
             <td><?php echo $fornecedor?></td>
