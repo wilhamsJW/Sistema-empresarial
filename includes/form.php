@@ -41,6 +41,8 @@
 
   <div style="text-align: right;">
   <button type="submit" class="btn btn-success btn-sm" id="button">Cadastrar</button>
+  <a href="index.php" role="button" class="btn btn-primary btn-sm">Voltar</a>
+
   </div>
 
 </div>
