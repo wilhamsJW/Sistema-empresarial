@@ -48,7 +48,9 @@
       <td><?php echo $categoria ?></td>
       <td><?php echo $quantidade ?></td>
       <td><?php echo $fornecedor ?></td>
-      <td><a class="btn btn-warning btn-sm" style="color:white;" href="edite.php?id=<?php echo $id_estoque ?>" role="button"><i class="fas fa-edit"></i>&nbsp;Editar</a></td>
+      <td><a class="btn btn-warning btn-sm" style="color:white;" href="edite.php?id=<?php echo $id_estoque ?>" role="button"><i class="fas fa-edit"></i>&nbsp;Editar</a>
+        <a class="btn btn-danger btn-sm" style="color:white;" href="connections_/delete.php?id=<?php echo $id_estoque ?>" role="button"><i class="far fa-trash-alt"></i>&nbsp;Excluir</a>
+      </td>
 
     </tr>
 
