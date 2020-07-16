@@ -23,3 +23,13 @@ if (isset($_POST['id'])) {
         header("location:../listar_produtos.php");
     }
 }
+
+?>
+
+<?php 
+
+    $categoria = filter_input(INPUT_POST, 'categoria', FILTER_SANITIZE_SPECIAL_CHARS);
+
+    $sql = "INSERT INTO categoria (categoria) values ('$categoria') ";
+    $query = mysqli_query($conecta, $sql);
+?>
