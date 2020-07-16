@@ -13,7 +13,7 @@
     <div style="text-align: right">
       <button type="submit" class="btn btn-primary btn-sm">Inserir Categoria</button>
     </div>
-    </fomr>
+    </form>
 
 </div>
 

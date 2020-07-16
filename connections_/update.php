@@ -32,4 +32,10 @@ $categoria = filter_input(INPUT_POST, 'categoria', FILTER_SANITIZE_SPECIAL_CHARS
 
 $sql = "INSERT INTO categoria (categoria) values ('$categoria') ";
 $query = mysqli_query($conecta, $sql);
+
+if(!$query){
+    echo "ERRO NO SERVIDOR";
+} else {
+    header("location:../");
+}
 ?>
