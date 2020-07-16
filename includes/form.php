@@ -18,12 +18,12 @@
 
           <?php
           include 'conexao.php';
-          $sql = "SELECT * FROM categoria";
+          $sql = "SELECT * FROM categoria order by nome_categoria ASC";
           $query = mysqli_query($conecta, $sql);
 
           while ($array = mysqli_fetch_assoc($query)) {
                 $id_categoria = $array['id_categoria'];
-                $nome_categoria = $array['categoria'];
+                $nome_categoria = $array['nome_categoria'];
           ?>
 
             <option><?php echo $nome_categoria ?></option>

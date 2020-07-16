@@ -36,7 +36,7 @@
         <div class="card-body">
           <h5 class="card-title">Adicionar Fornecedor</h5>
           <p class="card-text">Adicione um novo fornecedor.</p>
-          <a href="adicionar_fornecdor.php" class="btn btn-primary">Produtos</a>
+          <a href="adicionar_fornecedor.php" class="btn btn-primary">Produtos</a>
         </div>
       </div>
     </div>
