@@ -12,13 +12,14 @@
         <input type="text" class="form-control" name="nomeproduto" aria-describedby="emailHelp" placeholder="Insira o nome do produto" require>
       </div>
 
+
       <div class="form-group">
-        <label for="exampleFormControlSelect1">Categoria</label>
+        <label>Categoria</label>
         <select class="form-control" name="categoria" require>
 
           <?php
           include '../connections_/connection.php';
-          $sqli = "SELECT * FROM categoria order by nome_categoria ASC";
+          $sqli = "SELECT * FROM categoria ORDER BY nome_categoria ASC";
           $queryi = mysqli_query($conecta, $sqli);
 
           while ($arrayi = mysqli_fetch_assoc($queryi)) {
@@ -30,34 +31,34 @@
 
           <?php } ?>
 
-        </select>
-      </div>
+        </select> 
+      </div> 
+
       <div class="form-group">
-
-
         <div class="form-group">
           <label for="exampleInputEmail1">Quantidade</label>
           <input type="number" class="form-control" name="quantidade" aria-describedby="emailHelp" placeholder="Insira a quantidade do produto" require>
         </div>
 
         <div class="form-group">
-          <label for="exampleFormControlSelect1">Fornecedor</label>
-          <select class="form-control" name="fornecedor">
+          <label>Fornecedor</label>
+          <select class="form-control" name="fornecedor" require>
 
             <?php include_once '../connections_/connection.php';
-
             $sql = "SELECT * FROM fornecedor ORDER BY nome_forn ASC";
             $query = mysqli_query($conecta, $sql);
 
             while ($array = mysqli_fetch_assoc($query)) {
+              $id = $array["id_fornecedor"];
               $nome_forn = $array["nome_forn"];
 
             ?>
-              <option><?php $nome_forn ?></option>
+              <option><?php echo $nome_forn ?></option>
 
             <?php } ?>
           </select>
         </div>
+        
         <div class="form-group">
 
           <div style="text-align: right;">
