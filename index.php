@@ -27,7 +27,7 @@
         <div class="card-body">
           <h5 class="card-title">Adicionar categoria</h5>
           <p class="card-text">Adicione uma categoria de produto na sua lista.</p>
-          <a href="adicionar_categoria.php" class="btn btn-primary">Produtos</a>
+          <a href="adicionar_categoria.php" class="btn btn-primary">Categoria</a>
         </div>
       </div>
     </div>
@@ -36,7 +36,7 @@
         <div class="card-body">
           <h5 class="card-title">Adicionar Fornecedor</h5>
           <p class="card-text">Adicione um novo fornecedor.</p>
-          <a href="adicionar_fornecedor.php" class="btn btn-primary">Produtos</a>
+          <a href="adicionar_fornecedor.php" class="btn btn-primary">Fornecedores</a>
         </div>
       </div>
     </div>

@@ -17,13 +17,13 @@
         <select class="form-control" name="categoria" require>
 
           <?php
-          include 'conexao.php';
-          $sql = "SELECT * FROM categoria order by nome_categoria ASC";
-          $query = mysqli_query($conecta, $sql);
+          include '../connections_/connection.php';
+          $sqli = "SELECT * FROM categoria order by nome_categoria ASC";
+          $queryi = mysqli_query($conecta, $sqli);
 
-          while ($array = mysqli_fetch_assoc($query)) {
-                $id_categoria = $array['id_categoria'];
-                $nome_categoria = $array['nome_categoria'];
+          while ($arrayi = mysqli_fetch_assoc($queryi)) {
+            $id_categoria = $arrayi['id_categoria'];
+            $nome_categoria = $arrayi['nome_categoria'];
           ?>
 
             <option><?php echo $nome_categoria ?></option>
@@ -43,9 +43,19 @@
         <div class="form-group">
           <label for="exampleFormControlSelect1">Fornecedor</label>
           <select class="form-control" name="fornecedor">
-            <option>Fornecedor A</option>
-            <option>Fornecedor B</option>
-            <option>Fornecedor C</option>
+
+            <?php include_once '../connections_/connection.php';
+
+            $sql = "SELECT * FROM fornecedor ORDER BY nome_forn ASC";
+            $query = mysqli_query($conecta, $sql);
+
+            while ($array = mysqli_fetch_assoc($query)) {
+              $nome_forn = $array["nome_forn"];
+
+            ?>
+              <option><?php $nome_forn ?></option>
+
+            <?php } ?>
           </select>
         </div>
         <div class="form-group">

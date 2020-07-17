@@ -23,34 +23,3 @@ if (isset($_POST['id'])) {
         header("location:../listar_produtos.php");
     }
 }
-
-?>
-
-<?php
-
-$categoria = filter_input(INPUT_POST, 'categoria', FILTER_SANITIZE_SPECIAL_CHARS);
-
-$sql = "INSERT INTO categoria (categoria) values ('$categoria') ";
-$query = mysqli_query($conecta, $sql);
-
-if(!$query){
-    echo "ERRO NO SERVIDOR";
-} else {
-    header("location:../");
-}
-?>
-
-<?php 
-
-$fornecedor = filter_input(INPUT_POST, 'fornecedor', FILTER_SANITIZE_SPECIAL_CHARS);
-
-$sql = "INSERT INTO fornecedor (nome_forn) values ('$fornecedor') ";
-$query = mysqli_query($conecta, $sql);
-
-if(!$query){
-    echo "ERRO NO SERVIDOR";
-} else {
-    header("location:../");
-}
-
-?>

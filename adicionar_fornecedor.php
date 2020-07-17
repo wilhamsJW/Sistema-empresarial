@@ -6,7 +6,7 @@
     <a href="index.php" role="button" class="btn btn-success btn-sm">Voltar</a>
   </div>
   <h4>Cadastro de Fornecedor</h4>
-  <form action="connections_/update.php" method="post">
+  <form action="connections_/create.php" method="post">
     <div class="form-group">
       <input type="text" name="fornecedor" class="form-control" placeholder="Digite o nome do fornecedor">
     </div>
