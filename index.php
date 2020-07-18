@@ -31,12 +31,21 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-6"  style="margin-top: 20px;">
+    <div class="col-sm-6" style="margin-top: 20px;">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Adicionar Fornecedor</h5>
           <p class="card-text">Adicione um novo fornecedor.</p>
           <a href="adicionar_fornecedor.php" class="btn btn-primary">Fornecedores</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6" style="margin-top: 20px;">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Lista das Categorias</h5>
+          <p class="card-text">Edite ou delete uma categoria.</p>
+          <a href="Listar_categoria.php" class="btn btn-primary">Categorias</a>
         </div>
       </div>
     </div>

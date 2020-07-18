@@ -5,8 +5,8 @@ include_once 'connections_/connection.php';
 
 
 
-<div class="all">
-  <div class="container" id="containerprincipal">
+<div class="all" >
+  <div class="container" style="width: 500px;">
     <form action="connections_/update.php" method="POST" id="form">
       <h4 id="h4">Formulário de Cadastro</h4>
 
@@ -19,7 +19,7 @@ include_once 'connections_/connection.php';
         $id_estoque    = $array['id_estoque'];
         $numeroproduto = $array['numeroproduto'];
         $nomeproduto   = $array['nomeproduto'];
-        $categoria     = $array['categoria']; 
+        $categoria     = $array['categoria'];
         $quantidade    = $array['quantidade'];
         $fornecedor    = $array['fornecedor'];
 

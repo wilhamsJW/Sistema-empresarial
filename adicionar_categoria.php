@@ -13,8 +13,10 @@
     <div style="text-align: right">
       <button type="submit" class="btn btn-primary btn-sm">Inserir Categoria</button>
     </div>
+    <div style="text-align: right;margin-top:15px;">
+      <button class="btn-sm btn-danger" style="background-color: white;"><a role="button" href="editar_categoria.php">Editar Categoria Existente</a></button>
+    </div>
   </form>
-
 </div>
 
 
