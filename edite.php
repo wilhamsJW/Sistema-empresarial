@@ -5,7 +5,7 @@ include_once 'connections_/connection.php';
 
 
 
-<div class="all" >
+<div class="all">
   <div class="container" style="width: 500px;">
     <form action="connections_/update.php" method="POST" id="form">
       <h4 id="h4">Formulário de Cadastro</h4>
@@ -30,7 +30,7 @@ include_once 'connections_/connection.php';
           <input type="number" class="form-control" name="numeroproduto" value="<?php echo $numeroproduto ?>" disabled>
           <!--disabled o campo de edição input fica desabilitado, impedindo o usuário de alterar algo na caixa edição-->
           <input type="number" class="form-control" name="id" value="<?php echo $id ?>" style="display:none">
-          <!--guardando a id q está sendo enviada pela url-->
+          <!-- id q está sendo enviada pela url -->
         </div>
 
         <div class="form-group">

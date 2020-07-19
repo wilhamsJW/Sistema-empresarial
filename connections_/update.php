@@ -1,6 +1,7 @@
 <?php
-include_once 'connection.php';
+/* Update the of files edite.php and listar-produtos.php */
 
+include_once 'connection.php';
 if (isset($_POST['id'])) {
 
     $id            = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
@@ -23,3 +24,4 @@ if (isset($_POST['id'])) {
         header("location:../listar_produtos.php");
     }
 }
+?>

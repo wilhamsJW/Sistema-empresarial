@@ -2,11 +2,11 @@
 
 
 <div class="container" style="margin-top: 40px;">
-<div style="text-align: right">
-  <a href="index.php" role="button" class="btn btn-primary btn-sm">Voltar</a>
-</div>
+  <div style="text-align: right">
+    <a href="index.php" role="button" class="btn btn-primary btn-sm">Voltar</a>
+  </div>
   <h4>Lista de Produtos</h4>
-  
+
 
   <!--Exibir mensagem de erro-->
   <?php if (isset($mensagem)) { ?>
